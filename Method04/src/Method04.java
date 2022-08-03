@@ -22,12 +22,11 @@ import java.util.Scanner;
 
 public class Method04 {
 
+	// 메소드 정의
 	static void putChar(int n, char c) {
-		for (int i=0; i<n; i++) {
-			for (int j=0; j<=i; j++) {
-				System.out.print(c);
-			}
-			System.out.println();
+		
+		for (int i=0; i<=n; i++) {
+			System.out.print(c);
 		}
 	}
 	
@@ -40,7 +39,11 @@ public class Method04 {
 		System.out.print("문자 입력: ");
 		char c = sc.next().charAt(0);
 		
-		putChar(n, c);
+		for (int i=0; i<n; i++) {
+			// 메소드 훈령
+			putChar(i, c);
+			System.out.println();
+		}
 		
 		sc.close();
 	}
