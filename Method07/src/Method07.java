@@ -13,9 +13,13 @@ import java.util.Scanner;
  */
 
 public class Method07 {
-
+	
+	// static 이 중요함
+	static Scanner sc = new Scanner(System.in);
+	
 	// 1. 학생수를 입력하여 배열을 생성하는 메소드
-	static int[] putCount(Scanner sc) {
+//	static int[] putCount(Scanner sc) {
+	static int[] putCount() {
 		System.out.print("A반의 학생수 입력: ");
 		int numStudents = sc.nextInt();
 		
@@ -25,7 +29,8 @@ public class Method07 {
 	}
 	
 	// 2. 각 학생의 점수를 입력하는 메소드
-	static void inputScore(Scanner sc, int[] scores) {
+//	static void inputScore(Scanner sc, int[] scores) {
+	static void inputScore(int[] scores) {
 		System.out.println("각 학생의 점수 입력");
 		
 		for (int i=0; i<scores.length; i++) {
@@ -90,11 +95,13 @@ public class Method07 {
 		Scanner sc = new Scanner(System.in);
 		
 		// 1. 학생수를 입력하여 배열을 생성하는 메소드
-		int[] scores = putCount(sc);
+		int[] scores = putCount();
+//		int[] scores = putCount(sc);
 //		int[] scores = {55, 77, 83, 92, 65, 78, 96, 88, 52, 75};		
 		
 		// 2. 각 학생의 점수를 입력하는 메소드
-		inputScore(sc, scores);
+		inputScore(scores);
+//		inputScore(sc, scores);
 //		int numStudents = scores.length;
 
 		// 3. 총점을 계산하는 메소드
