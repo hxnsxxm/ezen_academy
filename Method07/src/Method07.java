@@ -47,7 +47,11 @@ public class Method07 {
 //	static double calcAvg(int totalScore, int numStudents) {
 	static double calcAvg(int[] scores) {
 		
-		int totalScore = calcTot(scores);
+//		int totalScore = calcTot(scores);
+		int totalScore = 0;
+		for (int i : scores) {
+			totalScore += i;
+		}
 		int numStudents = scores.length;
 
 		double avgScore = (double) totalScore/numStudents;
@@ -78,7 +82,7 @@ public class Method07 {
 		System.out.println("---------------------");
 		System.out.println("A반 학생들의 점수를 출력합니다.");
 		for (int i=0; i<scores.length; i++) {
-			System.out.printf("%d번째 학생의 점수: %d\n", i+1, scores[i]);
+			System.out.printf("%2d번째 학생의 점수: %3d\n", i+1, scores[i]);
 		}
 	}
 	
@@ -87,6 +91,7 @@ public class Method07 {
 		
 		// 1. 학생수를 입력하여 배열을 생성하는 메소드
 		int[] scores = putCount(sc);
+//		int[] scores = {55, 77, 83, 92, 65, 78, 96, 88, 52, 75};		
 		
 		// 2. 각 학생의 점수를 입력하는 메소드
 		inputScore(sc, scores);
