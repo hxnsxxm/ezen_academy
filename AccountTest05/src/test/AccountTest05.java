@@ -45,6 +45,7 @@ public class AccountTest05 {
 		Account a3 = new Account("한수연", "123457", 800);
 		TimeAccount a4 = new TimeAccount("동그라미", "654322", 3000, 50);
 		
+		// ★★★★★
 		Account x;
 		x = a1;
 		x = a2;  // 부모의 참조변수로는 자식의 인스턴스를 참조할 수 있따.
