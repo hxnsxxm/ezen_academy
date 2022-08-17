@@ -2,7 +2,7 @@ package shape;
 
 public class Point extends Shape {
 	
-	public Point() { }
+	//public Point() { }
 	
 	@Override
 	public void draw() {
