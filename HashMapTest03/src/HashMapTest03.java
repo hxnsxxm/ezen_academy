@@ -104,10 +104,12 @@ public class HashMapTest03 {
 		System.out.println("----------------");
 		
 		// 5. 맵에서 전화번호가 "010-4444-4444"인 회원의 나이를 32로 수정하시오.
-		if (map.put("010-4444-4444", new Member("123454", "정명석", 32)) == null) {
-			System.out.println("새로운 회원의 정보가 추가됩니다.");
-		} else {
-			System.out.println("회원의 정보를 수정하였습니다.");
+		it = keys.iterator();
+		while (it.hasNext()) {
+			String tel = it.next();
+			if (tel.equals("010-4444-4444")) {
+				map.get(tel).setAge(32);
+			}
 		}
 		//map.get("010-4444-4444").setAge(32);
 		it = keys.iterator();
